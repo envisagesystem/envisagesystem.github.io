@@ -1,71 +1,68 @@
-// main.js - scroll reveal + hamburger + nav highlight
+// main.js — Scroll reveal + Mobile menu + Active nav highlight
 (function () {
-  // helpers
-  const q = (s, el = document) => Array.from((el || document).querySelectorAll(s));
+  const q = (sel, el = document) => Array.from(el.querySelectorAll(sel));
 
-  // IntersectionObserver options
-  const ioOptions = {
-    root: null,
-    rootMargin: "0px 0px -12% 0px",
-    threshold: 0.08,
-  };
+  /* -----------------------------
+      INTERSECTION OBSERVER SETUP
+  ----------------------------- */
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-  // reveal callback (adds .in-view)
-  function revealCallback(entries, obs) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
         const el = entry.target;
 
-        // stagger children if data-stagger attribute
+        // handle staggered children
         if (el.dataset && el.dataset.stagger) {
-          const children = q(el.dataset.stagger, el);
-          children.forEach((c, i) => {
-            setTimeout(() => c.classList.add("in-view"), i * 120);
+          const items = q(el.dataset.stagger, el);
+          items.forEach((child, i) => {
+            setTimeout(() => child.classList.add("in-view"), i * 120);
           });
         }
 
         el.classList.add("in-view");
         obs.unobserve(el);
-      }
-    });
-  }
+      });
+    },
+    {
+      threshold: 0.08,
+      rootMargin: "0px 0px -12% 0px",
+    },
+  );
 
-  const observer = new IntersectionObserver(revealCallback, ioOptions);
+  /* -----------------------------
+      REVEAL ELEMENTS
+  ----------------------------- */
+  const revealItems = [
+    ".hero h1",
+    ".lead",
+    ".cta-row",
+    ".hero-right",
+    ".card-light",
+    ".card-muted",
+    ".service-card",
+    ".contact-box",
+  ];
 
-  // observe hero headline & related
-  const heroTitle = document.querySelector(".hero h1");
-  const heroLead = document.querySelector(".lead");
-  const ctas = document.querySelector(".cta-row");
-  const heroRight = document.querySelector(".hero-right");
-
-  if (heroTitle) observer.observe(heroTitle);
-  if (heroLead) observer.observe(heroLead);
-  if (ctas) observer.observe(ctas);
-  if (heroRight) observer.observe(heroRight);
-
-  // checklist stagger
-  q(".check").forEach((el, idx) => {
-    setTimeout(() => observer.observe(el), idx * 80);
+  revealItems.forEach((sel) => {
+    q(sel).forEach((el) => observer.observe(el));
   });
 
-  // about cards and chips
-  q(".card-light, .card-muted").forEach((el) => observer.observe(el));
-
-  q(".chip").forEach((el, idx) => {
-    setTimeout(() => observer.observe(el), idx * 40);
+  // checklist items stagger individually
+  q(".check").forEach((el, i) => {
+    setTimeout(() => observer.observe(el), i * 80);
   });
 
-  // services stagger
-  q(".service-card").forEach((el, idx) => {
-    setTimeout(() => observer.observe(el), idx * 90);
+  // chips stagger
+  q(".chip").forEach((el, i) => {
+    setTimeout(() => observer.observe(el), i * 40);
   });
 
-  // contact box
-  q(".contact-box").forEach((el) => observer.observe(el));
-
-  // smooth nav highlighting
+  /* -----------------------------
+     SECTION ACTIVE NAV INDICATOR
+  ----------------------------- */
   const sections = q("main section[id]");
-  const navLinks = q('.nav a[href^="#"]');
+  const navLinks = q('.desktop-nav a[href^="#"]');
 
   const sectionObserver = new IntersectionObserver(
     (entries) => {
@@ -74,14 +71,11 @@
 
         const id = entry.target.id;
 
-        navLinks.forEach((a) => {
-          if (a.getAttribute("href") === "#" + id) {
-            a.classList.add("active");
-            a.style.color =
-              getComputedStyle(document.documentElement).getPropertyValue("--hero-accent").trim() || "#0b63c6";
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === "#" + id) {
+            link.classList.add("active");
           } else {
-            a.classList.remove("active");
-            a.style.color = "";
+            link.classList.remove("active");
           }
         });
       });
@@ -89,9 +83,11 @@
     { threshold: 0.35 },
   );
 
-  sections.forEach((s) => sectionObserver.observe(s));
+  sections.forEach((sec) => sectionObserver.observe(sec));
 
-  // MOBILE HAMBURGER MENU
+  /* -----------------------------
+      MOBILE NAV (HAMBURGER)
+  ----------------------------- */
   const hamburger = document.querySelector(".hamburger");
   const mobileNav = document.querySelector(".mobile-nav");
 
@@ -101,23 +97,27 @@
       mobileNav.classList.toggle("open");
     });
 
-    // close menu on link click
-    q(".mobile-nav a").forEach((link) => {
-      link.addEventListener("click", () => {
+    // close menu on clicking a mobile link
+    q(".mobile-nav a").forEach((a) =>
+      a.addEventListener("click", () => {
         hamburger.classList.remove("active");
         mobileNav.classList.remove("open");
-      });
-    });
+      }),
+    );
   }
 
-  // small intro timeline for hero elements (fallback)
+  /* -----------------------------
+       FALLBACK HERO INTRO ANIM
+  ----------------------------- */
   window.addEventListener("load", () => {
-    setTimeout(() => {
-      if (heroTitle) heroTitle.classList.add("in-view");
+    const heroTitle = document.querySelector(".hero h1");
+    const heroLead = document.querySelector(".lead");
+    const ctas = document.querySelector(".cta-row");
+    const heroRight = document.querySelector(".hero-right");
 
-      setTimeout(() => heroLead && heroLead.classList.add("in-view"), 120);
-      setTimeout(() => ctas && ctas.classList.add("in-view"), 260);
-      setTimeout(() => heroRight && heroRight.classList.add("in-view"), 420);
-    }, 160);
+    setTimeout(() => heroTitle?.classList.add("in-view"), 150);
+    setTimeout(() => heroLead?.classList.add("in-view"), 300);
+    setTimeout(() => ctas?.classList.add("in-view"), 450);
+    setTimeout(() => heroRight?.classList.add("in-view"), 600);
   });
 })();
