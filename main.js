@@ -1,4 +1,4 @@
-// main.js - small vanilla scroll reveal + smooth nav highlight
+// main.js - scroll reveal + hamburger + nav highlight
 (function () {
   // helpers
   const q = (s, el = document) => Array.from((el || document).querySelectorAll(s));
@@ -15,6 +15,7 @@
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const el = entry.target;
+
         // stagger children if data-stagger attribute
         if (el.dataset && el.dataset.stagger) {
           const children = q(el.dataset.stagger, el);
@@ -22,6 +23,7 @@
             setTimeout(() => c.classList.add("in-view"), i * 120);
           });
         }
+
         el.classList.add("in-view");
         obs.unobserve(el);
       }
@@ -41,36 +43,37 @@
   if (ctas) observer.observe(ctas);
   if (heroRight) observer.observe(heroRight);
 
-  // observe checklist items individually (stagger)
+  // checklist stagger
   q(".check").forEach((el, idx) => {
-    // small delay to stagger after heroRight
     setTimeout(() => observer.observe(el), idx * 80);
   });
 
-  // about cards, chips
+  // about cards and chips
   q(".card-light, .card-muted").forEach((el) => observer.observe(el));
+
   q(".chip").forEach((el, idx) => {
-    // add staggered reveal for chips
-    setTimeout(() => observer.observe(el), idx * 30);
+    setTimeout(() => observer.observe(el), idx * 40);
   });
 
-  // services: reveal with stagger inside grid
+  // services stagger
   q(".service-card").forEach((el, idx) => {
-    // observe each service card; we can set small timeout for nicer stagger
     setTimeout(() => observer.observe(el), idx * 90);
   });
 
-  // contact cards
-  q(".contact-card, .contact-box, .cta-box").forEach((el) => observer.observe(el));
+  // contact box
+  q(".contact-box").forEach((el) => observer.observe(el));
 
   // smooth nav highlighting
-  const sections = q("main section[id], main [id]");
+  const sections = q("main section[id]");
   const navLinks = q('.nav a[href^="#"]');
+
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
+
         const id = entry.target.id;
+
         navLinks.forEach((a) => {
           if (a.getAttribute("href") === "#" + id) {
             a.classList.add("active");
@@ -83,34 +86,38 @@
         });
       });
     },
-    { root: null, threshold: 0.35 },
+    { threshold: 0.35 },
   );
 
   sections.forEach((s) => sectionObserver.observe(s));
 
-  // mobile nav behavior: simple scroll offset fix for anchor links
-  const navAnchors = q('a[href^="#"]');
-  navAnchors.forEach((a) => {
-    a.addEventListener("click", (e) => {
-      // let default smooth scroll happen
-      // for small offset (header height) we could adjust, but using CSS scroll-behavior is simpler
-      // close any mobile nav here if implemented
-    });
-  });
+  // MOBILE HAMBURGER MENU
+  const hamburger = document.querySelector(".hamburger");
+  const mobileNav = document.querySelector(".mobile-nav");
 
-  // small intro timeline for hero elements (in case not triggered by scroll on large screens)
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      mobileNav.classList.toggle("open");
+    });
+
+    // close menu on link click
+    q(".mobile-nav a").forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        mobileNav.classList.remove("open");
+      });
+    });
+  }
+
+  // small intro timeline for hero elements (fallback)
   window.addEventListener("load", () => {
     setTimeout(() => {
       if (heroTitle) heroTitle.classList.add("in-view");
-      setTimeout(() => {
-        if (heroLead) heroLead.classList.add("in-view");
-      }, 120);
-      setTimeout(() => {
-        if (ctas) ctas.classList.add("in-view");
-      }, 260);
-      setTimeout(() => {
-        if (heroRight) heroRight.classList.add("in-view");
-      }, 420);
+
+      setTimeout(() => heroLead && heroLead.classList.add("in-view"), 120);
+      setTimeout(() => ctas && ctas.classList.add("in-view"), 260);
+      setTimeout(() => heroRight && heroRight.classList.add("in-view"), 420);
     }, 160);
   });
 })();
