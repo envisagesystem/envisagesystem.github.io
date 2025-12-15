@@ -1,0 +1,74 @@
+/* App-level styles */
+.container {
+  width: min(1250px, 92%);
+  margin: auto;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.center-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.center-text h2 {
+  margin-bottom: 12px;
+}
+
+.center-text .ks {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chips {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  padding: 6px 14px;
+  background: #eef3fb;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.btn {
+  padding: 14px 28px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.btn-large {
+  padding: 16px 36px;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(11, 99, 198, 0.25);
+}
+
+.btn-ghost {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn-ghost:hover {
+  background: var(--accent);
+  color: #fff;
+}

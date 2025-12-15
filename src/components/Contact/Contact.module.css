@@ -1,0 +1,66 @@
+.contactSection {
+  background: linear-gradient(to bottom, #f7f9fb 0%, #eef3fb 100%);
+  padding: 80px 0;
+  margin-top: 60px;
+}
+
+.contactGridEnhanced {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin: 40px 0;
+}
+
+.contactBoxEnhanced {
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  animation: fadeUp 0.7s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+.contactBoxEnhanced:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+}
+
+.contactIcon {
+  margin: 0 auto 16px;
+  width: fit-content;
+}
+
+.contactBoxEnhanced h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.contactDetail {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.contactSubtext {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.ctaCenter {
+  text-align: center;
+  margin-top: 40px;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
