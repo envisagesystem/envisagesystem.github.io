@@ -1,0 +1,34 @@
+{
+  "name": "envisagesystem.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhijith-kumblasseriyil/envisagesystem.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhijith-kumblasseriyil/envisagesystem.github.io/issues"
+  },
+  "homepage": "https://abhijith-kumblasseriyil.github.io/envisagesystem.github.io/",
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.10.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.2",
+    "gh-pages": "^6.3.0",
+    "vite": "^7.3.0"
+  }
+}
