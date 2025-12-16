@@ -105,10 +105,33 @@
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 40px 0 60px;
+  }
+
+  .heroLeft {
+    margin-bottom: 30px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .lead {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+    gap: 12px;
   }
 
   .heroRight {
     justify-content: center;
+  }
+
+  .infoCard {
+    max-width: 100%;
   }
 }
 

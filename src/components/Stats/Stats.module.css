@@ -39,3 +39,35 @@
     transform: translateY(0);
   }
 }
+
+/* Responsive Styles */
+@media(max-width: 768px) {
+  .statsSection {
+    padding: 40px 0;
+    margin: 30px 0;
+  }
+  
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .statNumber {
+    font-size: 36px;
+  }
+  
+  .statLabel {
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .statNumber {
+    font-size: 32px;
+  }
+}

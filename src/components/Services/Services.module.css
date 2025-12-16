@@ -32,3 +32,26 @@
     transform: translateY(0);
   }
 }
+
+/* Responsive Styles */
+@media(max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .serviceCard {
+    padding: 20px;
+  }
+}
+
+@media(max-width: 480px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .serviceCard {
+    padding: 18px;
+  }
+}
