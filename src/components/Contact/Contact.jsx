@@ -22,7 +22,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Business Hours',
-      detail: 'Mon - Fri: 9AM - 6PM EST',
+      detail: 'Mon - Fri: 9AM - 6PM IST',
       subtext: '24/7 Emergency Support Available'
     },
     {

@@ -4,15 +4,15 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: "Envisage Systems transformed our legacy infrastructure into a modern, cloud-native solution. Their expertise and professionalism exceeded our expectations.",
-      author: "— Fortune 500 Financial Services"
+      author: "— Rajesh Kumar, CTO of Mumbai-based FinTech"
     },
     {
       quote: "The team's ability to deliver complex AI/ML solutions on time and within budget has made them our go-to technology partner.",
-      author: "— Global Healthcare Provider"
+      author: "— Priya Sharma, Head of Digital at Delhi Healthcare"
     },
     {
       quote: "Outstanding technical expertise combined with excellent communication. They understand both technology and business needs.",
-      author: "— Leading E-commerce Platform"
+      author: "— Arjun Patel, Founder of Bangalore E-commerce Startup"
     }
   ]
 
