@@ -38,7 +38,7 @@ const Footer = () => {
 
           <div className={styles.footerSection}>
             <h4 className={styles.footerHeading}>Contact</h4>
-            <a href="mailto:hello@envisagesystems.com">hello@envisagesystems.com</a>
+            <a href="mailto:envisagesystemsinc@gmail.com">envisagesystemsinc@gmail.com</a>
             <div className={styles.footerText}>Mon - Fri: 9AM - 6PM EST</div>
             <div className={styles.footerText}>24/7 Emergency Support</div>
           </div>

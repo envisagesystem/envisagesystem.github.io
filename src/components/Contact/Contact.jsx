@@ -10,7 +10,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Email',
-      detail: 'hello@envisagesystems.com',
+      detail: 'envisagesystemsinc@gmail.com',
       subtext: 'Response within 2 business hours'
     },
     {
@@ -60,7 +60,7 @@ const Contact = () => {
         </div>
 
         <div className={styles.ctaCenter}>
-          <a href="mailto:hello@envisagesystems.com" className="btn btn-primary btn-large">Schedule a Consultation</a>
+          <a href="mailto:envisagesystemsinc@gmail.com" className="btn btn-primary btn-large">Schedule a Consultation</a>
         </div>
       </div>
     </section>
