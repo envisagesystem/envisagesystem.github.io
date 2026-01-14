@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Envisage Systems Inc. — Forsee is to see</title>
+  <title>Envisage Systems Inc. — Foresee is to see</title>
   <meta name="description" content="Envisage Systems Inc — Custom software, cloud architecture, DevOps, AI/ML and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,14 @@
       </div>
     </a>
 
-    <!-- Desktop & Mobile Navigation (stacked on mobile) -->
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Desktop & Mobile Navigation -->
     <nav class="nav" role="navigation" aria-label="Primary navigation">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -54,6 +61,32 @@
 
     <!-- HERO -->
     <section class="container hero" aria-label="Hero">
+      <!-- Decorative Graphics -->
+      <div class="hero-graphic hero-graphic-1">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="80" stroke="url(#gradient1)" stroke-width="2" opacity="0.3"/>
+          <circle cx="100" cy="100" r="50" stroke="url(#gradient1)" stroke-width="1.5" opacity="0.2"/>
+          <defs>
+            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0b63c6;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#1a7ae8;stop-opacity:0.5" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="hero-graphic hero-graphic-2">
+        <svg width="150" height="150" viewBox="0 0 150 150" fill="none">
+          <path d="M75 20 L130 75 L75 130 L20 75 Z" stroke="url(#gradient2)" stroke-width="2" opacity="0.25" fill="none"/>
+          <path d="M75 40 L110 75 L75 110 L40 75 Z" stroke="url(#gradient2)" stroke-width="1.5" opacity="0.2" fill="none"/>
+          <defs>
+            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0b63c6;stop-opacity:0.8" />
+              <stop offset="100%" style="stop-color:#084a94;stop-opacity:0.4" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
       <div class="hero-left">
         <span class="eyebrow">ENTERPRISE SOFTWARE & CLOUD</span>
 
@@ -103,22 +136,33 @@
 
     <!-- STATS -->
     <section class="stats-section">
+      <!-- Decorative Pattern -->
+      <div class="stats-pattern">
+        <svg width="100%" height="100%" viewBox="0 0 400 400" preserveAspectRatio="none">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" opacity="0.3"/>
+        </svg>
+      </div>
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item">
-            <div class="stat-number">15+</div>
+            <div class="stat-number" data-target="15" data-suffix="+">0+</div>
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">200+</div>
+            <div class="stat-number" data-target="200" data-suffix="+">0+</div>
             <div class="stat-label">Projects Delivered</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">50+</div>
+            <div class="stat-number" data-target="50" data-suffix="+">0+</div>
             <div class="stat-label">Enterprise Clients</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">99.9%</div>
+            <div class="stat-number" data-target="99.9" data-suffix="%">0%</div>
             <div class="stat-label">Uptime SLA</div>
           </div>
         </div>
@@ -126,7 +170,14 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="container section">
+    <section id="about" class="container section about-section">
+      <!-- About Decoration -->
+      <div class="about-decoration">
+        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+          <path d="M50 10 L90 50 L50 90 L10 50 Z" stroke="rgba(11, 99, 198, 0.12)" stroke-width="2" fill="none"/>
+          <path d="M50 25 L75 50 L50 75 L25 50 Z" stroke="rgba(11, 99, 198, 0.08)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
       <div class="two-col">
         <div>
           <h2>About Envisage Systems Inc.</h2>
@@ -163,7 +214,15 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="container section">
+    <section id="services" class="container section services-section">
+      <!-- Section Decoration -->
+      <div class="section-decoration">
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+          <circle cx="60" cy="60" r="50" stroke="rgba(11, 99, 198, 0.1)" stroke-width="2" fill="none"/>
+          <circle cx="60" cy="60" r="35" stroke="rgba(11, 99, 198, 0.15)" stroke-width="1.5" fill="none"/>
+          <circle cx="60" cy="60" r="20" fill="rgba(11, 99, 198, 0.1)"/>
+        </svg>
+      </div>
       <div class="center-text">
         <h2>Our Services</h2>
         <p class="ks">Comprehensive technology solutions to drive your business forward.</p>
@@ -171,47 +230,95 @@
 
       <div class="services-grid">
         <article class="service-card">
-          <div class="ico"><svg width="20" height="20"><path d="M3 12h18" stroke="#0b63c6" stroke-width="2"/></svg></div>
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div><h4>Custom Software Development</h4><p>Tailored business-centric solutions.</p></div>
         </article>
 
         <article class="service-card">
-          <div class="ico"><svg width="22" height="22"><rect x="6" y="3" width="12" height="18" rx="2" stroke="#0b63c6" stroke-width="2"/></svg></div>
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="5" y="2" width="14" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 18v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div><h4>Mobile App Development</h4><p>iOS & Android apps built for performance.</p></div>
         </article>
 
         <article class="service-card">
-          <div class="ico"><svg width="20" height="20"><path d="M3 7h18M3 12h18M3 17h18" stroke="#0b63c6" stroke-width="2"/></svg></div>
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M2 8h20M2 12h20M2 16h12" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
           <div><h4>Web App Development</h4><p>Modern responsive web applications.</p></div>
         </article>
 
         <article class="service-card">
-          <div class="ico"><svg width="20" height="20"><path d="M20 17.5A4.5 4.5 0 0 0 15.5 13H7a4 4 0 1 0 .5 8h12z" stroke="#0b63c6" stroke-width="2"/></svg></div>
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M18 10h-5V5H6v14h12V10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13 5v5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="14" r="1" fill="currentColor"/>
+            </svg>
+          </div>
           <div><h4>Cloud Architecture</h4><p>AWS, Azure & GCP Cloud solutions.</p></div>
         </article>
 
         <article class="service-card">
-          <div class="ico"><svg width="20" height="20"><path d="M5 12h14M9 8v8" stroke="#0b63c6" stroke-width="2"/></svg></div>
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div><h4>DevOps & CI/CD</h4><p>Faster releases with automation.</p></div>
         </article>
 
         <article class="service-card">
-          <div class="ico"><svg width="20" height="20"><path d="M12 2l3 6 6 .5-4.5 4 1 6L12 16l-5.5 2.5 1-6L3 8.5 9 8z" stroke="#0b63c6" stroke-width="1.6"/></svg></div>
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <div><h4>Consulting</h4><p>Architectural and strategic tech guidance.</p></div>
         </article>
 
         <article class="service-card">
-          <div class="ico"><svg width="20" height="20"><path d="M12 3v18M3 12h18" stroke="#0b63c6" stroke-width="2"/></svg></div>
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M19.07 4.93l-2.83 2.83M7.76 16.24l-2.83 2.83M19.07 19.07l-2.83-2.83M7.76 7.76L4.93 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div><h4>AI/ML Solutions</h4><p>Predictive & intelligent systems.</p></div>
         </article>
 
         <article class="service-card">
-          <div class="ico"><svg width="20" height="20"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#0b63c6" stroke-width="2"/></svg></div>
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M9 9h6M9 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M3 12h18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
           <div><h4>API Development</h4><p>REST & GraphQL secure APIs.</p></div>
         </article>
 
         <article class="service-card">
-          <div class="ico"><svg width="20" height="20"><path d="M3 12h18M12 3v18" stroke="#0b63c6" stroke-width="2"/></svg></div>
+          <div class="ico">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+              <circle cx="9" cy="9" r="1.5" fill="currentColor"/>
+              <path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
           <div><h4>UI/UX Design</h4><p>Human-centric design systems.</p></div>
         </article>
       </div>
@@ -219,9 +326,21 @@
 
     <!-- EXPERTISE -->
     <section id="expertise" class="expertise container">
+      <!-- Tech Pattern Background -->
+      <div class="tech-pattern">
+        <svg width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="none">
+          <defs>
+            <pattern id="techPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="20" cy="20" r="2" fill="rgba(11, 99, 198, 0.08)"/>
+              <path d="M0 20 L40 20 M20 0 L20 40" stroke="rgba(11, 99, 198, 0.05)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#techPattern)"/>
+        </svg>
+      </div>
       <div class="center-text">
         <h2>Our Technical Expertise</h2>
-        <p class="ks">Leveraging cutting-edge technologies to build robust, scalable solutions</p>
+        <p class="ks">Leveraging cutting-edge technologies to build robust, scalable solutions.</p>
       </div>
       <div class="tech-categories">
         <div class="tech-category">
@@ -295,6 +414,23 @@
 
     <!-- CONTACT -->
     <section id="contact" class="contact-section">
+      <!-- Contact Graphics -->
+      <div class="contact-graphic contact-graphic-1">
+        <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
+          <path d="M90 20 Q140 50 160 90 Q140 130 90 160 Q40 130 20 90 Q40 50 90 20 Z"
+                stroke="rgba(11, 99, 198, 0.15)" stroke-width="2" fill="none"/>
+          <path d="M90 40 Q125 60 140 90 Q125 120 90 140 Q55 120 40 90 Q55 60 90 40 Z"
+                stroke="rgba(11, 99, 198, 0.1)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <div class="contact-graphic contact-graphic-2">
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+          <rect x="10" y="10" width="100" height="100" rx="8"
+                stroke="rgba(11, 99, 198, 0.12)" stroke-width="2" fill="none"/>
+          <rect x="20" y="20" width="80" height="80" rx="6"
+                stroke="rgba(11, 99, 198, 0.08)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
       <div class="container">
         <div class="center-text">
           <h2>Let's Build Something Great Together</h2>
@@ -310,7 +446,7 @@
               </svg>
             </div>
             <h4>Email</h4>
-            <p class="contact-detail">hello@envisagesystems.com</p>
+            <p class="contact-detail">envisagesystemsinc@gmail.com</p>
             <p class="contact-subtext">Response within 2 business hours</p>
           </div>
 
@@ -335,13 +471,13 @@
               </svg>
             </div>
             <h4>Consultation</h4>
-            <p class="contact-detail">Free 30-min consultation</p>
+            <p class="contact-detail">Free 30-minute consultation</p>
             <p class="contact-subtext">Discuss your project needs</p>
           </div>
         </div>
 
         <div class="cta-center">
-          <a href="mailto:hello@envisagesystems.com" class="btn btn-primary btn-large">Schedule a Consultation</a>
+          <a href="mailto:envisagesystemsinc@gmail.com" class="btn btn-primary btn-large">Schedule a Consultation</a>
         </div>
       </div>
     </section>
@@ -382,7 +518,7 @@
 
         <div class="footer-section">
           <h4 class="footer-heading">Contact</h4>
-          <a href="mailto:hello@envisagesystems.com">hello@envisagesystems.com</a>
+          <a href="mailto:envisagesystemsinc@gmail.com">envisagesystemsinc@gmail.com</a>
           <div class="footer-text">Mon - Fri: 9AM - 6PM EST</div>
           <div class="footer-text">24/7 Emergency Support</div>
         </div>
@@ -409,6 +545,112 @@
         loader.style.display = 'none';
       }, 500);
     });
+
+    // Sticky header on scroll
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    const navLinks = document.querySelectorAll('.nav a');
+
+    menuToggle.addEventListener('click', function() {
+      menuToggle.classList.toggle('active');
+      nav.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', nav.classList.contains('active'));
+    });
+
+    // Close mobile menu when clicking a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        nav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const isClickInsideNav = nav.contains(event.target);
+      const isClickOnToggle = menuToggle.contains(event.target);
+
+      if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
+        menuToggle.classList.remove('active');
+        nav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Count-up animation for stats
+    function animateValue(element, start, end, duration, suffix = '') {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const current = progress * (end - start) + start;
+
+        // Format the number based on whether it's a decimal or integer
+        let formatted;
+        if (suffix === '%') {
+          formatted = current.toFixed(1) + suffix;
+        } else {
+          formatted = Math.floor(current) + suffix;
+        }
+
+        element.textContent = formatted;
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        } else {
+          // Ensure final value is exact
+          if (suffix === '%') {
+            element.textContent = end.toFixed(1) + suffix;
+          } else {
+            element.textContent = Math.floor(end) + suffix;
+          }
+        }
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    // Intersection Observer for stats animation
+    const statsSection = document.querySelector('.stats-section');
+    const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+    let hasAnimated = false;
+
+    if (statsSection && statNumbers.length > 0) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hasAnimated) {
+            hasAnimated = true;
+
+            statNumbers.forEach((stat, index) => {
+              const target = parseFloat(stat.getAttribute('data-target'));
+              const suffix = stat.getAttribute('data-suffix') || '';
+
+              // Stagger the animations slightly
+              setTimeout(() => {
+                animateValue(stat, 0, target, 2000, suffix);
+              }, index * 150);
+            });
+
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.3,
+        rootMargin: '0px'
+      });
+
+      observer.observe(statsSection);
+    }
   </script>
 
 </body>
