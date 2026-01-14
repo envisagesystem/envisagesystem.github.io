@@ -16,10 +16,7 @@
   <div id="page-loader" class="page-loader">
     <div class="loader-content">
       <div class="loader-logo">
-        <svg width="64" height="64" viewBox="0 0 48 48" fill="none">
-          <rect width="48" height="48" rx="10" fill="#0b63c6"/>
-          <path d="M24 12L32 20H28V28H32L24 36L16 28H20V20H16L24 12Z" fill="white"/>
-        </svg>
+        <img src="logo.png" alt="Envisage Systems Inc. Logo" width="64" height="64">
       </div>
       <div class="loader-spinner"></div>
       <div class="loader-text">Loading...</div>
@@ -29,10 +26,7 @@
   <header class="container header" role="banner">
     <a class="brand" href="#top">
       <div class="logo-placeholder">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-          <rect width="48" height="48" rx="10" fill="#0b63c6"/>
-          <path d="M24 12L32 20H28V28H32L24 36L16 28H20V20H16L24 12Z" fill="white"/>
-        </svg>
+        <img src="logo.png" alt="Envisage Systems Inc. Logo" width="48" height="48">
       </div>
       <div>
         <h1>Envisage Systems Inc.</h1>
@@ -490,10 +484,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
-              <rect width="48" height="48" rx="10" fill="#0b63c6"/>
-              <path d="M24 12L32 20H28V28H32L24 36L16 28H20V20H16L24 12Z" fill="white"/>
-            </svg>
+            <img src="logo.png" alt="Envisage Systems Inc. Logo" width="40" height="40">
           </div>
           <strong style="color:#fff; font-size: 18px;">Envisage Systems Inc.</strong>
           <div class="small">Foresee is to see</div>
@@ -526,7 +517,7 @@
 
       <div class="footer-bottom">
         <div class="footer-legal">
-          <span>&copy; 2024 Envisage Systems Inc. All rights reserved.</span>
+          <span>&copy; <span id="current-year">2024</span> Envisage Systems Inc. All rights reserved.</span>
         </div>
         <div class="footer-links">
           <a href="privacy-policy.html">Privacy Policy</a>
@@ -537,6 +528,14 @@
   </footer>
 
   <script>
+    // Update current year in footer
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+
     // Page loader - hide when page is fully loaded
     window.addEventListener('load', function() {
       const loader = document.getElementById('page-loader');
