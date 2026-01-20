@@ -19,6 +19,33 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* -----------------------------------------
+   ANIMATED PARTICLES BACKGROUND
+------------------------------------------*/
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+#particles-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 /* -----------------------------------------
@@ -515,6 +542,25 @@ body {
   .stats-pattern {
     opacity: 0.1;
   }
+
+  .particles-container {
+    display: none;
+  }
+
+  .floating-icon,
+  .success-graphic {
+    display: none;
+  }
+
+  .section-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .section-icon svg {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 /* -----------------------------------------
@@ -618,6 +664,48 @@ body {
   z-index: 1;
 }
 
+/* Floating Icons in Stats Section */
+.floating-icon {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  animation: floatRotate 15s ease-in-out infinite;
+}
+
+.floating-icon-1 {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-icon-2 {
+  top: 60%;
+  right: 15%;
+  animation-delay: 5s;
+}
+
+.floating-icon-3 {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 10s;
+}
+
+@keyframes floatRotate {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-30px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(-25px) rotate(270deg);
+  }
+}
+
 .stat-item {
   animation: var(--fade-up);
 }
@@ -654,6 +742,23 @@ body {
   margin-bottom: 40px;
   position: relative;
   z-index: 1;
+}
+
+.section-icon {
+  margin: 0 auto 20px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(11, 99, 198, 0.1) 0%, rgba(11, 99, 198, 0.05) 100%);
+  border-radius: 16px;
+  padding: 8px;
+  animation: var(--fade-up);
+}
+
+.section-icon svg {
+  filter: drop-shadow(0 2px 8px rgba(11, 99, 198, 0.2));
 }
 
 .center-text h2 {
@@ -751,6 +856,12 @@ body {
   color: var(--text);
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+}
+
+.chip svg {
+  flex-shrink: 0;
 }
 
 .chip:hover {
@@ -918,11 +1029,38 @@ body {
 /* -----------------------------------------
    TESTIMONIALS
 ------------------------------------------*/
+.success-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.success-graphic {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  animation: float 12s ease-in-out infinite;
+}
+
+.success-graphic-1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.success-graphic-2 {
+  bottom: 15%;
+  right: 8%;
+  animation-delay: 6s;
+}
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 28px;
   margin-top: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .testimonial-card {

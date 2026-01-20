@@ -12,6 +12,11 @@
 </head>
 
 <body>
+  <!-- ANIMATED BACKGROUND PARTICLES -->
+  <div class="particles-container">
+    <canvas id="particles-canvas"></canvas>
+  </div>
+
   <!-- PAGE LOADER -->
   <div id="page-loader" class="page-loader">
     <div class="loader-content">
@@ -141,6 +146,24 @@
           <rect width="100%" height="100%" fill="url(#grid)" opacity="0.3"/>
         </svg>
       </div>
+      <!-- Floating Icons -->
+      <div class="floating-icon floating-icon-1">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+          <path d="M12 6v6l4 2" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="floating-icon floating-icon-2">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="3" width="18" height="18" rx="2" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+          <path d="M8 12h8" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="floating-icon floating-icon-3">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+        </svg>
+      </div>
       <div class="container">
         <div class="stats-grid">
           <div class="stat-item">
@@ -180,10 +203,35 @@
           </p>
 
           <div class="chips">
-            <span class="chip">ISO 27001 Certified</span>
-            <span class="chip">SOC 2 Compliant</span>
-            <span class="chip">GDPR Ready</span>
-            <span class="chip">Enterprise SLA</span>
+            <span class="chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 12c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2" stroke="currentColor" stroke-width="2"/>
+                <path d="M3 12c1 0 2-1 2-2s-1-2-2-2-2 1-2 2 1 2 2 2" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 3c0 1-1 2-2 2s-2-1-2-2 1-2 2-2 2 1 2 2" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 21c0-1 1-2 2-2s2 1 2 2-1 2-2 2-2-1-2-2" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              ISO 27001 Certified
+            </span>
+            <span class="chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              SOC 2 Compliant
+            </span>
+            <span class="chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              GDPR Ready
+            </span>
+            <span class="chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Enterprise SLA
+            </span>
           </div>
         </div>
 
@@ -218,6 +266,18 @@
         </svg>
       </div>
       <div class="center-text">
+        <div class="section-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="3" width="18" height="18" rx="3" stroke="url(#serviceIconGradient)" stroke-width="2"/>
+            <path d="M8 12h8M12 8v8" stroke="url(#serviceIconGradient)" stroke-width="2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="serviceIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0b63c6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#1a7ae8;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         <h2>Our Services</h2>
         <p class="ks">Comprehensive technology solutions to drive your business forward.</p>
       </div>
@@ -333,6 +393,17 @@
         </svg>
       </div>
       <div class="center-text">
+        <div class="section-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="url(#expertiseIconGradient)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="expertiseIconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#0b63c6;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#084a94;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         <h2>Our Technical Expertise</h2>
         <p class="ks">Leveraging cutting-edge technologies to build robust, scalable solutions.</p>
       </div>
@@ -376,7 +447,21 @@
     </section>
 
     <!-- SUCCESS STORIES -->
-    <section id="success" class="container section">
+    <section id="success" class="container section success-section">
+      <!-- Success Section Graphics -->
+      <div class="success-graphic success-graphic-1">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+          <circle cx="40" cy="40" r="35" stroke="rgba(11, 99, 198, 0.08)" stroke-width="1.5" fill="none"/>
+          <circle cx="40" cy="40" r="25" stroke="rgba(11, 99, 198, 0.12)" stroke-width="1" fill="none"/>
+          <circle cx="40" cy="40" r="15" fill="rgba(11, 99, 198, 0.05)"/>
+        </svg>
+      </div>
+      <div class="success-graphic success-graphic-2">
+        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+          <path d="M30 10 L50 30 L30 50 L10 30 Z" stroke="rgba(11, 99, 198, 0.1)" stroke-width="1.5" fill="none"/>
+          <path d="M30 20 L40 30 L30 40 L20 30 Z" stroke="rgba(11, 99, 198, 0.08)" stroke-width="1" fill="none"/>
+        </svg>
+      </div>
       <div class="center-text">
         <h2>Client Success Stories</h2>
         <p class="ks">Trusted by industry leaders worldwide</p>
@@ -649,6 +734,92 @@
       });
 
       observer.observe(statsSection);
+    }
+
+    // Animated Background Particles
+    const canvas = document.getElementById('particles-canvas');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      const particleCount = 50;
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      function createParticle() {
+        return {
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 2 + 1,
+          speedX: (Math.random() - 0.5) * 0.5,
+          speedY: (Math.random() - 0.5) * 0.5,
+          opacity: Math.random() * 0.5 + 0.2
+        };
+      }
+
+      function initParticles() {
+        particles = [];
+        for (let i = 0; i < particleCount; i++) {
+          particles.push(createParticle());
+        }
+      }
+
+      function drawParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach((particle, i) => {
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(11, 99, 198, ${particle.opacity})`;
+          ctx.fill();
+
+          // Connect nearby particles
+          particles.slice(i + 1).forEach(otherParticle => {
+            const dx = particle.x - otherParticle.x;
+            const dy = particle.y - otherParticle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 120) {
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.strokeStyle = `rgba(11, 99, 198, ${0.1 * (1 - distance / 120)})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          });
+        });
+      }
+
+      function updateParticles() {
+        particles.forEach(particle => {
+          particle.x += particle.speedX;
+          particle.y += particle.speedY;
+
+          if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
+          if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
+
+          particle.x = Math.max(0, Math.min(canvas.width, particle.x));
+          particle.y = Math.max(0, Math.min(canvas.height, particle.y));
+        });
+      }
+
+      function animate() {
+        updateParticles();
+        drawParticles();
+        requestAnimationFrame(animate);
+      }
+
+      resizeCanvas();
+      initParticles();
+      animate();
+
+      window.addEventListener('resize', () => {
+        resizeCanvas();
+        initParticles();
+      });
     }
   </script>
 
