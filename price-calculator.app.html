@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - UnitPrice</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --text:#e9eefc;
+      --muted:#b9c3e6;
+      --line:rgba(255,255,255,0.10);
+      --accent:#4cc9f0;
+    }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:linear-gradient(180deg, #070b14, var(--bg));
+      color:var(--text);
+      line-height:1.6;
+    }
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+      padding:28px 16px 60px;
+    }
+    header{
+      padding:18px 0 10px;
+      border-bottom:1px solid var(--line);
+      margin-bottom:18px;
+    }
+    h1{
+      margin:0;
+      font-size:28px;
+      letter-spacing:0.2px;
+    }
+    .sub{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .card{
+      background:rgba(255,255,255,0.03);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px 18px;
+      margin:14px 0;
+      box-shadow:0 12px 40px rgba(0,0,0,0.25);
+    }
+    h2{
+      margin:0 0 8px;
+      font-size:18px;
+      color:#ffffff;
+    }
+    p{
+      margin:8px 0;
+      color:var(--muted);
+    }
+    ul{
+      margin:10px 0 0 18px;
+      color:var(--muted);
+    }
+    li{ margin:6px 0; }
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+    a:hover{ text-decoration:underline; }
+    .footer{
+      margin-top:20px;
+      padding-top:16px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(76,201,240,0.08);
+      color:var(--text);
+      font-size:12px;
+      margin-top:10px;
+    }
+    code{
+      background:rgba(255,255,255,0.06);
+      padding:2px 6px;
+      border-radius:8px;
+      border:1px solid var(--line);
+      color:var(--text);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Privacy Policy</h1>
+      <div class="sub">
+        App: <strong>Price Calculator</strong> <br />
+        Last updated: <strong>07 February 2026</strong>
+      </div>
+      <div class="badge">No account • No tracking • No data collection</div>
+    </header>
+
+    <section class="card">
+      <h2>Overview</h2>
+      <p>
+        Price Calculator is a simple calculator app that helps you calculate the total price of an item in a store by using:
+        <code>Price per unit × Quantity/Weight</code>.
+      </p>
+      <p>
+        We respect your privacy. This app does <strong>not</strong> collect, store, or share any personal data.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Information We Collect</h2>
+      <p><strong>We do not collect any information.</strong></p>
+      <ul>
+        <li>No name, email, phone number, or address is collected.</li>
+        <li>No location data is collected.</li>
+        <li>No device identifiers are collected.</li>
+        <li>No analytics or tracking SDKs are used.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Data Storage</h2>
+      <p>
+        The app does not use any database or backend server.
+      </p>
+      <p>
+        Any values you type (price or quantity) are used only for calculation on your device and are not saved.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Permissions</h2>
+      <p>
+        Price Calculator does not require any special permissions.
+      </p>
+      <ul>
+        <li>No camera access</li>
+        <li>No microphone access</li>
+        <li>No contacts access</li>
+        <li>No storage access</li>
+        <li>No location access</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Third-Party Services</h2>
+      <p>
+        This app does not use third-party services such as analytics, ads, or crash reporting tools.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Children’s Privacy</h2>
+      <p>
+        Price Calculator does not knowingly collect personal information from anyone, including children under 13.
+        Since no data is collected, there is no risk of child data collection.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Changes to This Privacy Policy</h2>
+      <p>
+        If the app changes in the future (for example, if we add data storage, analytics, or cloud sync),
+        this privacy policy will be updated accordingly.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <p>
+        If you have any questions about this Privacy Policy, you can contact us at:
+      </p>
+      <p>
+        Email: <a href="mailto:envisagesystemsinc@gmail.com">envisagesystemsinc@gmail.com</a>
+      </p>
+      <p style="margin-top:10px;">
+        (Replace this email with your real support email before publishing.)
+      </p>
+    </section>
+
+    <div class="footer">
+      © <span id="year"></span> Price Calculator. All rights reserved.
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
